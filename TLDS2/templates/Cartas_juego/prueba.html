@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">  
+    <title>Juego de memoria con hand tracking</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="sex">
+      <div class="flex-box-2">
+        <a href="c:/Users/ASUS/Desktop/MP3/TLDS2/templates/menu3.html">
+          <img class = "IMGA" src="img/regresar.png">
+        </a>
+      </div>
+      <div class="flex-box-3">
+        <a href="c:/Users/ASUS/Desktop/MP3/TLDS2/templates/Cartas_juego/prueba.html">
+          <img class = "IMGM" src="img/reset.png">
+        </a>
+      </div>
+      <div class="flex-box-4">
+        <button class="apren"><a href="c:/Users/ASUS/Desktop/MP3/TLDS2/templates/menu2.html">
+          APRENDIZAJE
+        </a></button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+      Swal.fire({
+title: '¡Pon a prueba tu memoria!',
+text: 'Coloca tus manos como en el video. Para hacer clic, solo baja el dedo índice.',
+imageUrl: 'img/inst.gif',
+imageWidth: 400,
+imageHeight: 200,
+imageAlt: 'Custom image',
+allowOutsideClick: false,
+})
+    </script>
+    <div class="wrapper">
+      <div id="error-counter">0</div> <!-- elemento añadido -->
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-3.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-2.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png"  alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="img/atras.png" alt="icon" style="width: 100%;">
+          </div>
+          <div class="view back-view">
+            <img src="img/img-4.png" alt="card-img">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script> <!-- modificado para agregar app.js -->
+  </body>
+</html>

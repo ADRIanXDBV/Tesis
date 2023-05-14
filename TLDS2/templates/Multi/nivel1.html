@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Juego de lenguaje de señas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <body>
+    <script>
+      Swal.fire({
+title: 'Opcion Multiple!!',
+text: 'Coloca tus manos como en el video. Para hacer clic, solo baja el dedo índice.',
+imageUrl: 'img/inst.gif',
+imageWidth: 400,
+imageHeight: 200,
+imageAlt: 'Custom image',
+allowOutsideClick: false,
+})
+</script>
+    <div id="letra"></div>
+    <div id="opciones">
+      <img  style="width: 300px; border: 2px solid red; padding: 10px; margin: 5px; margin-top: 8%;" src="img/A.png" id="opcion1" onclick="verificarRespuesta('opcion1') ">
+      <img style="width: 300px; border: 2px solid red; padding: 10px; margin: 5px; margin-top: 8%;" src="img/B.png" id="opcion2" onclick="verificarRespuesta('opcion2')">
+      <img style="width: 300px; border: 2px solid red; padding: 10px; margin: 5px; margin-top: 8%;" src="img/C.png" id="opcion3" onclick="verificarRespuesta('opcion3')">
+      <div id="respuesta-correcta" style="display:none;">
+        <h1 class="respuesta-correcta">¡Correcto!</h1>
+      </div>
+      
+    </div>
+    
+    <script>
+      
+      const letras = ['A', 'B', 'C','A', 'B', 'C','A', 'B', 'C','A', 'B', 'C','A', 'B', 'C','A', 'B', 'C','A', 'B', 'C'];
+      const opciones = ['opcion1', 'opcion2', 'opcion3'];
+      
+      function obtenerLetraAleatoria() {
+        const indice = Math.floor(Math.random() * letras.length);
+        return letras[indice];
+      }
+
+      function obtenerOpcionesAleatorias(letra) {
+        const opcionesAleatorias = opciones.slice();
+        opcionesAleatorias.splice(opcionesAleatorias.indexOf('opcion' + (letras.indexOf(letra) + 1)), 1);
+        opcionesAleatorias.sort(() => Math.random() - 0.5);
+        opcionesAleatorias.push('opcion' + (letras.indexOf(letra) + 1));
+        return opcionesAleatorias;
+      }
+
+      function mostrarLetraYopciones() {
+        const letra = obtenerLetraAleatoria();
+        const opcionesAleatorias = obtenerOpcionesAleatorias(letra);
+        document.getElementById('letra').innerText = letra;
+        for (let i = 0; i < opcionesAleatorias.length; i++) {
+          const opcionId = opcionesAleatorias[i];
+          const opcionElement = document.getElementById(opcionId);
+          opcionElement.innerText = letras[i];
+        }
+      }
+
+      function verificarRespuesta(opcionId) {
+        const letraMostrada = document.getElementById('letra').innerText;
+        const opcionIndex = opciones.indexOf(opcionId);
+        const letraSeleccionada = letras[opcionIndex];
+        if (letraSeleccionada === letraMostrada) {
+          document.getElementById('respuesta-correcta').style.display = 'block';
+          Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Bien Hecho!!',
+  position: console ,
+  allowOutsideClick: false,
+  showConfirmButton: false,
+  timer: 1900
+})
+          setTimeout(function(){
+            window.location.href = 'nivel2.html';
+          }, 2000);
+        } else {
+          Swal.fire({
+  position: 'top-end',
+  icon: 'info',
+  title: 'Trata de nuevo :3 ',
+  allowOutsideClick: false,
+  position: console ,
+  showConfirmButton: false,
+  timer: 2000
+})
+        }
+      }
+
+      mostrarLetraYopciones();
+    </script>
+    
+
+  </body>
+  
+</html>

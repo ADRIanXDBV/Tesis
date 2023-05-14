@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JUEGOS</title>
+     <style>
+          .boton1{
+               background-color: rosybrown;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               text-align: center;
+               width: 45%;
+               height: 105%;
+          }
+          .boton1::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .boton2{
+               background-color: royalblue;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               text-align: center;
+               width: 45%;
+               height: 105%;
+          }
+          .boton2::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .boton3{
+               background-color: burlywood;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               text-align: center;
+               width: 45%;
+               height: 105%;
+          }
+          .boton3::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .principal{
+	        width: 95%;
+	        display: flex;
+	        flex-direction: column;
+	        flex-wrap: wrap;
+            margin-left: 3%;
+          }
+          .lateral{
+	        width: 200%;
+            margin-left: 10%;
+          }   
+          .contenido{
+	        display: flex;
+	        justify-content: space-between;
+          }
+          .h1{
+            text-align: center;
+            margin-top: 5%;
+          }
+          .container{
+               background-image: url("img/bosque2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+               margin: 3px;
+               width: 95%;
+               color: purple;
+               text-align: center;
+          }
+          .IMGM{
+               width: 100%;
+               height: 100%;
+               margin-right: 10px;
+               text-align: center;
+               border-radius: 12px;
+          }
+          .IMGA{
+               width: 100%;
+               height: 100%;
+               margin-right: 10px;
+               text-align: center;
+          }
+          .IMGO{
+               width: 100%;
+               height: 100%;
+               text-align: center;
+               border-radius: 12px;
+          }
+          .flex-box-2 { 
+            display: flex;
+            width: 100%;
+            height: 50%;
+          }
+          .flex-box-3 { 
+            display: flex;
+            width: 100%;
+          }
+          .texto { 
+           text-align: center;
+          }
+          .alado{
+            display: flex;
+            flex-direction: column;
+          }
+          .boton4{
+               background-color: rosybrown;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               margin-top: 50px;
+               text-align: center;
+               width: 45%;
+               height: 40%;
+          }
+          .boton5{
+               background-color: royalblue;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               margin-top: 50px;
+               text-align: center;
+               width: 45%;
+               height: 40%;
+          }
+          .boton6{
+               background-color: burlywood;
+               cursor: pointer;
+               border: none;
+               padding: 16px 16px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               margin: 5%;
+               margin-top: 50px;
+               text-align: center;
+               width: 45%;
+               height: 40%;
+          }
+     </style>
+</head>
+<h1 class="h1">JUEGOS</h1>
+<body class = "container" >
+    <div class="contenido">
+    <main class="principal">
+        <div class="alado">
+            <div class="flex-box-2">
+                <button class="boton1"><a class="texto" href="Cartas_juego/prueba.html"><img class = "IMGM" src="img/mcartas.png"></button></a>
+                <button class="boton2"><a class="texto" href="Ahorcado/menuah.html"><img class = "IMGA" src="img/mahorcado.png"></button></a>
+                <button class="boton3"><a class="texto" href="Multi/nivel1.html"><img class = "IMGO" src="img/mopcion.png"></button></a>
+            </div>
+            <div class="flex-box-3">
+                <button class="boton4"><a class="texto" href="Cartas_juego/prueba.html" style="color: black;">MEMORIA</a></button>
+                <button class="boton5"><a class="texto" href="Ahorcado/menuah.html" style="color: black;">AHORCADO</a></button>
+                <button class="boton6"><a class="texto" href="Multi/nivel1.html" style="color: black;">OPCION</a></button>
+            </div>
+            <button style="background-color: lightgreen; border-radius: 10px ; height: 10%; width: 40%; margin-left: 30%;"><a href="c:/Users/ASUS/Desktop/MP3/TLDS2/templates/menu1.html" style="color: black; font-size: 200%;">VOLVER</a></button>
+
+          </div>
+    </main>
+    </div>
+</body>
+</html>

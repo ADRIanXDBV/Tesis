@@ -1,0 +1,291 @@
+
+* {
+  box-sizing: border-box;
+}
+.Volver{
+  color: #6454d8;
+}
+.main-container {
+  max-width: 800px;
+  margin: auto;
+}
+h1.titulo {
+  margin: 20px auto 80px auto;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-size: 50%;
+}
+h1#msg-final {
+  text-align: center;
+  color: rgb(176, 11, 11);
+  transition: all .5s ease;
+  transform: scale(0);
+  min-height: 50px;
+  margin-bottom: 0;
+}
+.zoom-in {
+  transform: scale(1) !important;
+}
+#acierto {
+  text-align: center;
+  min-height: 24px;
+  transform: scale(0);
+}
+.acierto {
+  animation: zoomInOut 1s ease;
+}
+.rojo {
+  color: red;
+}
+.verde {
+  color: green;
+}
+@keyframes zoomInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+h2.palabra {
+  margin: 0 auto 25px auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 250%;
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px auto; 
+}
+body {
+  margin-left: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ce2727, #a938ba, #e7cd4c, #6454d8, #1bd9b3);
+  background-size: 800% 800%;
+  -webkit-animation: neon-gradient 15s ease infinite;
+  -moz-animation: neon-gradient 15s ease infinite;
+  animation: neon-gradient 15s ease infinite;
+}
+
+@-webkit-keyframes neon-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes neon-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes neon-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.botones{
+  margin-top: 0.5%;
+  margin-left: 5%;
+  width: 100%;
+  height: 100%;
+}
+.boton{
+  background-color: lightblue;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  margin-left: 170%;
+  margin-top: 20%;
+}
+.boton::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+       45deg, 
+       red, blue, deeppink, blue,
+            red, blue, deeppink, blue    
+  );
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+} 
+.box27{
+    float: left;
+}
+.box01{
+  border: 5px solid black;
+  float: left;
+}
+.box02{
+  border: 5px solid black;
+  float: left;
+}
+.box03{
+  border: 5px solid black;
+  float: left;
+}
+.box04{
+  border: 5px solid black;
+  float: left;
+}
+.box05{
+  border: 5px solid black;
+  float: left;
+}
+.box06{
+  border: 5px solid black;
+  float: left;
+}
+.box07{
+  border: 5px solid black;
+  float: left;
+}
+.box08{
+  border: 5px solid black;
+  float: left;
+}
+.box09{
+  border: 5px solid black;
+  float: left;
+}
+.box10{
+  border: 5px solid black;
+  float: left;
+}
+.box11{
+  border: 5px solid black;
+  float: left;
+}
+.box12{
+  border: 5px solid black;
+  float: left;
+}
+.box13{
+  border: 5px solid black;
+  float: left;
+}
+.box14{
+  border: 5px solid black;
+  float: left;
+}
+.box15{
+  border: 5px solid black;
+  float: left;
+}
+.box16{
+  border: 5px solid black;
+  float: left;
+}
+.box17{
+  border: 5px solid black;
+  float: left;
+}
+.box18{
+  border: 5px solid black;
+  float: left;
+}
+.box19{
+  border: 5px solid black;
+  float: left;
+}
+.box20{
+  border: 5px solid black;
+  float: left;
+}
+.box21{
+  border: 5px solid black;
+  float: left;
+}
+.box22{
+  border: 5px solid black;
+  float: left;
+}
+.box23{
+  border: 5px solid black;
+  float: left;
+}
+.box24{
+  border: 5px solid black;
+  float: left;
+}
+.box25{
+  border: 5px solid black;
+  float: left;
+}
+.box26{
+  border: 5px solid black;
+  float: left;
+}
+
+.no-wrap {
+  flex-wrap: nowrap !important;
+}
+.col {
+  width: 50%;
+  text-align: center;
+}
+#turnos h3 {
+  margin: auto;
+  font-size: 200%;
+}
+h3 span {
+   color: rgb(227, 15, 15);
+   font-size: 100%;
+}
+.letra:disabled {
+  color:rgba(255, 0, 0, 0.5);
+}
+picture {
+  position: relative;
+}
+picture img {
+  position: absolute;
+  top: -203px;
+  left: -455px;
+  height: 225px;
+}
+#image5, #image4, #image3,
+#image2, #image1, #image0 {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.fade-in {
+  opacity: 1 !important;
+}
+.encuadre {
+  border: 2px dashed crimson;
+  padding: 3px 2px 2px 6px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Juego Ahorcado</title>
+    <link rel="stylesheet" href="estilo-ahoracado.css">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      Swal.fire({
+        title: 'Juguemos al Ahorcado!!',
+text: 'Coloca tus manos como en el video. Para hacer clic, solo baja el dedo índice.',
+imageUrl: 'img/inst.gif',
+imageWidth: 400,
+imageHeight: 200,
+imageAlt: 'Custom image',
+allowOutsideClick: false,
+})
+    </script>
+        <h1 class="titulo" style="visibility: hidden;">Aaaa</h1>
+        <h1 id="msg-final"></h1>
+        <h3 id="acierto"></h3>
+        <div class="flex-row no-wrap">
+          <h2 class="palabra" id="palabra"></h2>
+          <picture>
+            <img src="img/ahorcado_6.png" alt="" id="image6">
+            <img src="img/ahorcado_5.png" alt="" id="image5">
+            <img src="img/ahorcado_4.png" alt="" id="image4">
+            <img src="img/ahorcado_3.png" alt="" id="image3">
+            <img src="img/ahorcado_2.png" alt="" id="image2">
+            <img src="img/ahorcado_1.png" alt="" id="image1">
+            <img src="img/ahorcado_0.png" alt="" id="image0">
+          </picture>
+        </div>
+        <div class="flex-row" id="turnos">
+          <div class="col">
+            <h3>Intentos restantes: <span id="intentos">6</span></h3>
+          </div>
+          <div class="col">
+            <button onclick="pista()" id="pista" style="font-size: 150%;">Dame una pista!</button>
+            <strong><span id="hueco-pista" style="font-size: 150%;"></span></strong>
+          </div>
+        
+        <div>
+            <div class="botones">
+              <div class="box01"><button value="A" onclick="intento('A')" class="letra" id="A"><img src="img/A.png" width="100" height="100" ></button></div>
+              <div class="box02"><button value="B" onclick="intento('B')" class="letra" id="B"><img src="img/B.png" width="100" height="100" ></button></div>
+              <div class="box03"><button value="C" onclick="intento('C')" class="letra" id="C"><img src="img/C.png" width="100" height="100" ></button></div>
+              <div class="box04"><button value="D" onclick="intento('D')" class="letra" id="D"><img src="img/D.png" width="100" height="100" ></button></div>
+              <div class="box05"><button value="E" onclick="intento('E')" class="letra" id="E"><img src="img/E.png" width="100" height="100" ></button></div>
+              <div class="box06"><button value="F" onclick="intento('F')" class="letra" id="F"><img src="img/F.png" width="100" height="100" ></button></div>
+              <div class="box07"><button value="G" onclick="intento('G')" class="letra" id="G"><img src="img/G.png" width="100" height="100" ></button></div>
+              <div class="box08"><button value="H" onclick="intento('H')" class="letra" id="H"><img src="img/H.png" width="100" height="100" ></button></div>
+              <div class="box09"><button value="I" onclick="intento('I')" class="letra" id="I"><img src="img/I.png" width="100" height="100" ></button></div>
+              <div class="box10"><button value="J" onclick="intento('J')" class="letra" id="J"><img src="img/J.png" width="100" height="100" ></button></div>
+              <div class="box11"><button value="K" onclick="intento('K')" class="letra" id="K"><img src="img/K.png" width="100" height="100" ></button></div>
+              <div class="box12"><button value="L" onclick="intento('L')" class="letra" id="L"><img src="img/L.png" width="100" height="100" ></button></div>
+              <div class="box13"><button value="M" onclick="intento('M')" class="letra" id="M"><img src="img/M.png" width="100" height="100" ></button></div>
+              <div class="box14"><button value="N" onclick="intento('N')" class="letra" id="N"><img src="img/N.png" width="100" height="100" ></button></div>
+              <div class="box15"><button value="O" onclick="intento('O')" class="letra" id="O"><img src="img/O.png" width="100" height="100" ></button></div>
+              <div class="box16"><button value="P" onclick="intento('P')" class="letra" id="P"><img src="img/P.png" width="100" height="100" ></button></div>
+              <div class="box17"><button value="Q" onclick="intento('Q')" class="letra" id="Q"><img src="img/Q.png" width="100" height="100" ></button></div>
+              <div class="box18"><button value="R" onclick="intento('R')" class="letra" id="R"><img src="img/R.png" width="100" height="100" ></button></div>
+              <div class="box19"><button value="S" onclick="intento('S')" class="letra" id="S"><img src="img/S.png" width="100" height="100" ></button></div>
+              <div class="box20"><button value="T" onclick="intento('T')" class="letra" id="T"><img src="img/T.png" width="100" height="100" ></button></div>
+              <div class="box21"><button value="U" onclick="intento('U')" class="letra" id="U"><img src="img/U.png" width="100" height="100" ></button></div>
+              <div class="box22"><button value="V" onclick="intento('V')" class="letra" id="V"><img src="img/V.png" width="100" height="100" ></button></div>
+              <div class="box23"><button value="W" onclick="intento('W')" class="letra" id="W"><img src="img/W.png" width="100" height="100" ></button></div>
+              <div class="box24"><button value="X" onclick="intento('X')" class="letra" id="X"><img src="img/X.png" width="100" height="100" ></button></div>
+              <div class="box25"><button value="Y" onclick="intento('Y')" class="letra" id="Y"><img src="img/Y.png" width="100" height="100" ></button></div>
+              <div class="box26"><button value="Z" onclick="intento('Z')" class="letra" id="Z"><img src="img/Z.png" width="100" height="100" ></button></div>  
+              <div class="box27"><button class="boton"><a href="c:/Users/ASUS/Desktop/MP3/TLDS2/templates/menu2.html">Aprendizaje</a></button></div>   
+            </div>
+        </div>
+      </div>
+    <script src="ahorcadocue.js"></script>
+  </body>
+</html>

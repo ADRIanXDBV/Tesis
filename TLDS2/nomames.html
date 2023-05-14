@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hand Tracking con OpenCV y Mediapipe</title>
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/handsjs"></script>
+</head>
+<body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <script>
+        // Función que se llama cuando OpenCV está listo
+        function onOpenCvReady() {
+            // Obtenemos el video y el canvas
+            var video = document.getElementById("video");
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            // Iniciamos el seguimiento de las manos con Mediapipe
+            const hands = new Hands({
+                locateFile: (file) => {
+                    return `https://cdn.jsdelivr.net/npm/@mediapipe/handsjs@0.10.1/dist/${file}`;
+                }
+            });
+            hands.setOptions({
+                maxNumHands: 1,
+                minDetectionConfidence: 0.5,
+                minTrackingConfidence: 0.5
+            });
+            hands.onResults(onHandResults);
+
+            // Capturamos el video de la cámara
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                video.srcObject = stream;
+                video.play();
+            });
+
+            // Función que se llama cuando se detecta una mano
+            function onHandResults(results) {
+                // Borramos el canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Dibujamos los puntos de las manos
+                if (results.multiHandLandmarks) {
+                    for (var i = 0; i < results.multiHandLandmarks.length; i++) {
+                        var landmarks = results.multiHandLandmarks[i];
+                        for (var j = 0; j < landmarks.length; j++) {
+                            var x = landmarks[j].x * canvas.width;
+                            var y = landmarks[j].y * canvas.height;
+                            ctx.beginPath();
+                            ctx.arc(x, y, 5, 0, 2 * Math.PI, false);
+                            ctx.fillStyle = 'red';
+                            ctx.fill();
+                        }
+                    }
+                }
+            }
+
+            // Función para procesar cada frame del video
+            function processVideo() {
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                hands.send({ image: canvas });
+                setTimeout(processVideo, 30);
+            }
+
+            // Empezamos a procesar el video
+            processVideo();
+        }
+    </script>
+</body>
+</html>

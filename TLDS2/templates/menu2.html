@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Videostreaming</title>
+     <style>
+           img {
+    border: none;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  img:hover {
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+  }
+          .Titulo{
+               text-align: center;
+               font-family: Arial;
+               font-size: 40;
+          }
+          .boton1{
+               display: block;
+               background-color: aqua;
+               cursor: pointer;
+               border: none;
+               padding: 16px 32px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               display: block;
+               margin: 5%;
+               text-align: center;
+          }
+          .boton1::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .boton2{
+               background-color: #D58CFC;
+               cursor: pointer;
+               border: none;
+               padding: 16px 32px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               display: block;
+               margin: 5%;
+               text-align: center;
+          }
+          .boton2::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .boton3{
+          
+               background-color: salmon;
+               cursor: pointer;
+               border: none;
+               padding: 16px 32px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               display: block;
+               margin: 5%;
+               text-align: center;
+          }
+     
+
+          .boton3::before{
+               box-shadow: 0px 0px 20px rgb(0, 255, 0);
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .boton4{
+               background-color: goldenrod;
+               cursor: pointer;
+               border: none;
+               padding: 16px 32px;
+               color: #fff;
+               font-size: 24px;
+               font-weight: bold;
+               position: relative;
+               border-radius: 12px;
+               display: block;
+               margin: 5%;
+               text-align: center;
+          }
+          .boton4::before{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               z-index: -1;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                    45deg, 
+                    red, blue, deeppink, blue,
+                         red, blue, deeppink, blue    
+               );
+               background-size: 800%;
+               border-radius: 10px;
+               filter: blur(8px);
+               animation: glowing 20s linear infinite;
+          } 
+          .principal{
+	        margin-bottom: 20px;
+	        width: 100%;
+	        padding: 20px;
+	        display: flex;
+	        flex-direction: column;
+	        flex-wrap: wrap;
+	        justify-content: space-between;
+            margin-left: 10%;
+          }
+          .lateral{
+	        width: 200%;
+            margin-left: 10%;
+          }   
+          .contenido{
+	        display: flex;
+	        justify-content: space-between;
+          }
+          .h1{
+            text-align: center;
+          }
+          .container{
+               margin: 0;
+               padding: 10px;
+               width: 95%;
+               height: 50vh;
+               color: purple;
+               text-align: center;
+               background-image: url("img/flores4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+          }
+     </style>
+</head>
+<h1 class="h1">JUEGA Y APRENDE</h1>
+<body class = "container" >
+    <div class="contenido">
+	<aside class="lateral">
+        <img class = "img" src="img/xd.png">
+	</aside>
+     <main class="principal">
+        <button class="boton1"><a href="plant.html">Vocales</a></button>
+        <button class="boton2"><a href="conso.html">Consonantes</a></button>
+        <button class="boton3"><a href="abc.html">ABC</a></button>
+        <button class="boton4"><a href="menu1.html">Volver</a></button>
+	</main>
+    </div>
+</body>
+</html>

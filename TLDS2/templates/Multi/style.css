@@ -1,0 +1,68 @@
+
+#letra {
+    font-size: 72px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #respuesta-correcta {
+    display:none;
+    position: absolute;
+    left: 700px;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+  #opciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  button {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  body {
+
+    background: linear-gradient(135deg, #ce2727, #a938ba, #e7cd4c, #6454d8, #1bd9b3);
+    background-size: 800% 800%;
+    -webkit-animation: neon-gradient 15s ease infinite;
+    -moz-animation: neon-gradient 15s ease infinite;
+    animation: neon-gradient 15s ease infinite;
+  }
+  
+  @-webkit-keyframes neon-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes neon-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes neon-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
